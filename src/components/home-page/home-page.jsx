@@ -9,8 +9,6 @@ import FavoriteItems from "../favorite";
 
 
 const HomePage = () => {
-    
-
     const {
       playlist: { data },
       recents,
