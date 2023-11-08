@@ -1,5 +1,5 @@
 # Premium YouTube Project
-The `Premium YouTube Project` is about to give you the environment of browsing YouTube playlist without advertise advertisement
+The `Premium YouTube Project` is about to give you the environment of browsing YouTube playlist without advertisement
 This project shows the usecase of some concept in ReactJS
 - `YouTube API` Handling.
 - Managing Complex logic to get YouTube Videos.
