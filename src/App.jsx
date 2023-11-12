@@ -1,6 +1,5 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import NavBar from "./components/navbar";
-import { Container, Typography } from "@mui/material";
 import { BrowserRouter, Routes, Route  } from 'react-router-dom'
 import HomePage from "./components/home-page/home-page";
 import PlayerPage from "./components/player-page";
@@ -8,9 +7,9 @@ import PlayerPage from "./components/player-page";
 
 const NotFound = () =>{
   return (
-    <Container maxWidth="md" sx={{ my: 16 }}>
-      <Typography align="center" variant="h2">404! Page Not Found</Typography>
-    </Container>
+    <div className="notFoundPage">
+      <h2>404! Page Not Found</h2>
+    </div>
   );
 }
 

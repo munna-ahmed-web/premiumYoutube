@@ -1,0 +1,42 @@
+.notFoundPage{
+    margin: 120px auto 0;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.container{
+    
+    border-radius: 5px;
+    margin: 120px auto 0;
+    max-width: 1100px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.container1{
+    background-color: #F5F5F5;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.Container2{
+    border-radius: 5px;
+    padding: 7px;
+    background-color: #F5F5F5;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.playListCard{
+    background-color: rgb(226, 203, 203);
+    border-radius: 5px;
+    /* max-width: 200px; */
+}

@@ -1,10 +1,9 @@
 
-
 import { useStoreState } from "easy-peasy";
 import PlayListCardItem from "../playlist-card-item";
 
-import { Typography, Grid } from "@mui/material";
 import { v4 as uuidv4 } from "uuid";
+import RecentFavourite from "../playListDetails/RecentFavourite";
 
 
 
@@ -25,39 +24,20 @@ const RecentsPlaylist = () => {
 
   return (
     <div>
-      <Typography
-        variant="h6"
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        Recent Playlists
-      </Typography>
+      <p>Recent Playlists</p>
       <hr />
       {playListArray.length > 0 && (
-        <Grid
-          container
-          gap={2}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <div>
           {playListArray.map((item) => {
             return (
-              <PlayListCardItem
+              <RecentFavourite
                 key={uuidv4()}
-                playListThumbnail={item.playListThumbnail}
                 playListTitle={item.playListTitle}
-                channelTitle={item.channelTitle}
                 playlistId={item.playListId}
               />
             );
           })}
-        </Grid>
+        </div>
       )}
     </div>
   );

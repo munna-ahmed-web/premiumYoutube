@@ -7,6 +7,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import {StoreProvider} from 'easy-peasy'
 import store from './store/index.js';
+import './main.css'
 
 
 

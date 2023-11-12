@@ -1,6 +1,6 @@
 import { useStoreState } from "easy-peasy";
-import FavoriteCardItem from "./favorite-card-item";
-import { Grid, Typography } from "@mui/material";
+import RecentFavourite from "../playListDetails/RecentFavourite";
+
 
 const FavoriteItems = () => {
   const {
@@ -21,40 +21,20 @@ const FavoriteItems = () => {
 
   return (
     <div>
-      <Typography
-        variant="h6"
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          mt:'25px'
-        }}
-      >
-        Favorite Playlists
-      </Typography>
+      <p>Favorite Playlists</p>
       <hr />
       {favoriteArray.length > 0 && (
-        <Grid
-          container
-          gap={2}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
+        <div>
           {favoriteArray.map((listItem) => {
             return (
-              <FavoriteCardItem
-                channelTitle={listItem.channelTitle}
-                playListThumbnail={listItem.playListThumbnail}
+              <RecentFavourite
+                key={listItem.playListId}
                 playListTitle={listItem.playListTitle}
                 playlistId={listItem.playListId}
-                key={listItem.playListId}
               />
             );
           })}
-        </Grid>
+        </div>
       )}
     </div>
   );

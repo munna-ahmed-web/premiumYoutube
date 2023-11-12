@@ -1,60 +1,48 @@
 
-import { Container, Grid, Typography } from "@mui/material";
 import PlayListCardItem  from "../playlist-card-item";
 import {useStoreState} from 'easy-peasy'
 import RecentsPlaylist from "../recents";
 import FavoriteItems from "../favorite";
+import { useState } from "react";
+import Pagination from "../pagination/Pagination";
 
 
 
 
 const HomePage = () => {
-    const {
-      playlist: { data },
-      recents,
-      favorites,
-    } = useStoreState((store) => store);
+  const [currentPage, setcurrentPage] = useState(1);
+  const [postPerPage, setpostPerPage] = useState(6);
+  const {
+    playlist: { data },
+    recents,
+    favorites,
+  } = useStoreState((store) => store);
 
-    const playListArray = Object.values(data);
+  const totalPlayLists = Object.values(data);
 
-    let recentsCom;
-    if (data && recents.items) {
-      recentsCom = <RecentsPlaylist />;
-    }
+  //Another Component*******************************************************
+  let recentsCom;
+  if (data && recents.items) {
+    recentsCom = <RecentsPlaylist />;
+  }
 
-    let favoriteCom;
-    if(data && favorites.items){
-      favoriteCom = <FavoriteItems />;
-    }
+  let favoriteCom;
+  if (data && favorites.items) {
+    favoriteCom = <FavoriteItems />;
+  }
+  //Another Component*******************************************************
 
+  const lastIndex = currentPage * postPerPage;
+  const firstIndex = lastIndex - postPerPage;
+  const playListArray = totalPlayLists.slice(firstIndex, lastIndex)
   return (
-    <Container maxWidth="lg" sx={{ my: 16 }}>
-      <div>{recentsCom}</div>
-      <div>{favoriteCom}</div>
-      <div>
-        <Typography
-          variant="h6"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            mt: '25px'
-          }}
-        >
-          All PlayLists
-        </Typography>
+    <div className="container">
+      <div className="container1">
+        <p>All PlayLists</p>
         <hr />
-        <div>
+        <div className="cardContainer">
           {playListArray.length > 0 && (
-            <Grid
-              container
-              gap={2}
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+            <>
               {playListArray.map((item) => {
                 return (
                   <PlayListCardItem
@@ -66,11 +54,20 @@ const HomePage = () => {
                   />
                 );
               })}
-            </Grid>
+            </>
           )}
         </div>
+        <Pagination
+          postPerPage={postPerPage}
+          totalPost={totalPlayLists.length}
+          setcurrentPage={setcurrentPage}
+        />
       </div>
-    </Container>
+      <div className="Container2">
+        <div>{recentsCom}</div>
+        <div>{favoriteCom}</div>
+      </div>
+    </div>
   );
 };
 

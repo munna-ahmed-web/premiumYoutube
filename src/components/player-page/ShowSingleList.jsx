@@ -7,7 +7,6 @@ import Button from "@mui/material/Button";
      contentDetails: { videoId },
    } = videoInfo;
 
-   console.log(videoInfo)
    return (
      <div>
        <List>
