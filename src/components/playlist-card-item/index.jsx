@@ -28,12 +28,11 @@ const PlayListCardItem = ({
 
   return (
     <div className="playListCard">
-      {/* <CardMedia
-        component="img"
-        image={playListThumbnail.url}
-        alt="Play List Title"
-      /> */}
-      <div>
+      <div className="imageSection">
+        <img src={playListThumbnail.url} alt={playListTitle} />
+      </div>
+
+      <div className="detailsSection">
         <p>
           {`${
             playListTitle.length > 50
@@ -41,28 +40,22 @@ const PlayListCardItem = ({
               : playListTitle
           }`}
         </p>
-        <p>{channelTitle}</p>
       </div>
 
-      <div>
-        <Button to={`/player/${playlistId}`} component={Link}>
-          <div>
+      <div className="actionSection">
+        <>
+          <Button to={`/player/${playlistId}`} component={Link}>
             <PlayCircleOutline />
-          </div>
-          <p>Start Tutorial</p>
-        </Button>
-      </div>
+          </Button>
 
-      <div>
-        <Button onClick={() => handleFavorites(playlistId)}>
-          <>
+          <Button onClick={() => handleFavorites(playlistId)}>
             <FavoriteIcon />
-          </>
-          <p>Add to Favorites</p>
-        </Button>
-        <Button onClick={() => handleDeletePlaylist(playlistId)}>
-          <DeleteIcon />
-        </Button>
+          </Button>
+
+          <Button onClick={() => handleDeletePlaylist(playlistId)}>
+            <DeleteIcon />
+          </Button>
+        </>
       </div>
     </div>
   );

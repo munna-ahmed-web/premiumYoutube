@@ -38,10 +38,8 @@ const HomePage = () => {
   return (
     <div className="container">
       <div className="container1">
-        <p>All PlayLists</p>
-        <hr />
-        <div className="cardContainer">
-          {playListArray.length > 0 && (
+        <h2 className="mainPlTitle">PlayLists</h2>
+        {playListArray.length>0 ? (<div className="cardContainer">
             <>
               {playListArray.map((item) => {
                 return (
@@ -55,8 +53,8 @@ const HomePage = () => {
                 );
               })}
             </>
-          )}
-        </div>
+        </div>): <p>Play list not available. Click above to add playlist.</p> }
+        
         <Pagination
           postPerPage={postPerPage}
           totalPost={totalPlayLists.length}

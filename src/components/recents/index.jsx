@@ -24,8 +24,7 @@ const RecentsPlaylist = () => {
 
   return (
     <div>
-      <p>Recent Playlists</p>
-      <hr />
+      <h4 className="mainPlTitle">Recent Playlists</h4>
       {playListArray.length > 0 && (
         <div>
           {playListArray.map((item) => {

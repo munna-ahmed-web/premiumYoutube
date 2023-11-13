@@ -1,42 +1,63 @@
-.notFoundPage{
-    margin: 120px auto 0;
-    max-width: 1100px;
-    text-align: center;
+.notFoundPage {
+  margin: 120px auto 0;
+  max-width: 1100px;
+  text-align: center;
 }
 
-.container{
-    
-    border-radius: 5px;
-    margin: 120px auto 0;
-    max-width: 1100px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 10px;
+.container {
+  border-radius: 5px;
+  margin: 120px auto 0;
+  max-width: 1100px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
 }
 
-.container1{
-    background-color: #F5F5F5;
-    padding: 7px;
-    border-radius: 5px;
+.container1 {
+  background-color: #f5f5f5;
+  padding: 7px;
+  border-radius: 5px;
+}
+.mainPlTitle {
+    margin: 5px auto;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
-.Container2{
-    border-radius: 5px;
-    padding: 7px;
-    background-color: #F5F5F5;
-    display: grid;
-    grid-template-rows: auto auto;
+.Container2 {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap:  8px;
 }
 
-.cardContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
+.Container2 div {
+     background-color: #f5f5f5;
+     border-radius: 5px;
 }
 
-.playListCard{
-    background-color: rgb(226, 203, 203);
-    border-radius: 5px;
-    /* max-width: 200px; */
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.playListCard {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.imageSection img {
+  width: 80%;
+}
+
+.detailsSection{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.detailsSection p{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
 }

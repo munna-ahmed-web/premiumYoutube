@@ -21,8 +21,7 @@ const FavoriteItems = () => {
 
   return (
     <div>
-      <p>Favorite Playlists</p>
-      <hr />
+      <h4 className="mainPlTitle">Favorite Playlists</h4>
       {favoriteArray.length > 0 && (
         <div>
           {favoriteArray.map((listItem) => {
