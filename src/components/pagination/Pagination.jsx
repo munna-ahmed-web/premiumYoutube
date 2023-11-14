@@ -1,6 +1,11 @@
 import { Button} from "@mui/material";
 
-const Pagination = ({ totalPost, postPerPage, setcurrentPage }) => {
+const Pagination = ({
+  totalPost,
+  postPerPage,
+  setcurrentPage,
+  currentPage,
+}) => {
   const pages = [];
   for (let i = 1; i <= Math.ceil(totalPost / postPerPage); i++) {
     pages.push(i);
@@ -10,7 +15,6 @@ const Pagination = ({ totalPost, postPerPage, setcurrentPage }) => {
       {pages.map((page, index) => {
         return (
           <Button
-            variant="contained"
             onClick={() => setcurrentPage(page)}
             key={index}
             sx={{
@@ -20,6 +24,7 @@ const Pagination = ({ totalPost, postPerPage, setcurrentPage }) => {
               marginBottom: "5px",
               marginTop: "5px",
             }}
+            variant={page == currentPage ? "contained" : "outlined"}
           >
             {page}
           </Button>

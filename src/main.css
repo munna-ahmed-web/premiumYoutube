@@ -1,3 +1,9 @@
+.activeButton{
+  color: white;
+  background-color: #1565C0;
+}
+
+
 .notFoundPage {
   margin: 120px auto 0;
   max-width: 1100px;

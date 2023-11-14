@@ -34,6 +34,7 @@ const ShowVideoList = ({ singlePlaylist, getVideoId }) => {
         postPerPage={postPerPage}
         totalPost={allLists.length}
         setcurrentPage={setcurrentPage}
+        currentPage={currentPage}
       />
     </div>
   );

@@ -14,7 +14,7 @@ const RecentFavourite = ({ playListTitle, playlistId }) => {
                 color: "black",
                 border: "1px solid black",
                 width: "100%",
-                padding: "0",
+
               }}
             >
               {playListTitle}

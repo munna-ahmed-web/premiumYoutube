@@ -44,15 +44,29 @@ const PlayListCardItem = ({
 
       <div className="actionSection">
         <>
-          <Button to={`/player/${playlistId}`} component={Link}>
+          <Button
+            to={`/player/${playlistId}`}
+            component={Link}
+            variant="outlined"
+            sx={{ margin: "1px" }}
+          >
             <PlayCircleOutline />
           </Button>
 
-          <Button onClick={() => handleFavorites(playlistId)}>
+          <Button
+            onClick={() => handleFavorites(playlistId)}
+            variant="outlined"
+            sx={{ margin: "1px" }}
+          >
             <FavoriteIcon />
           </Button>
 
-          <Button onClick={() => handleDeletePlaylist(playlistId)}>
+          <Button
+            onClick={() => handleDeletePlaylist(playlistId)}
+            color="warning"
+            variant="outlined"
+            sx={{ margin: "1px" }}
+          >
             <DeleteIcon />
           </Button>
         </>

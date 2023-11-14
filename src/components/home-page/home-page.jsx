@@ -52,13 +52,14 @@ const HomePage = () => {
             </>
           </div>
         ) : (
-          <p>Play list not available. Click above to add playlist.</p>
+          <h4>Playlists are not available. Click above to add playlist.</h4>
         )}
 
         <Pagination
           postPerPage={postPerPage}
           totalPost={totalPlayLists.length}
           setcurrentPage={setcurrentPage}
+          currentPage={currentPage}
         />
       </div>
       <div className="Container2">
