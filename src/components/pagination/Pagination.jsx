@@ -9,7 +9,18 @@ const Pagination = ({ totalPost, postPerPage, setcurrentPage }) => {
     <div>
       {pages.map((page, index) => {
         return (
-          <Button variant="contained" onClick={() => setcurrentPage(page)} key={index} sx={ {minWidth:"40px", padding:"0 4px", marginRight:"5px"}} >
+          <Button
+            variant="contained"
+            onClick={() => setcurrentPage(page)}
+            key={index}
+            sx={{
+              minWidth: "40px",
+              padding: "0 4px",
+              marginRight: "5px",
+              marginBottom: "5px",
+              marginTop: "5px",
+            }}
+          >
             {page}
           </Button>
         );

@@ -1,5 +1,4 @@
 import { Container } from "@mui/material";
-import { useState } from "react";
 import ReactYTPlayer from "./video-player";
 
 const VideoPlayer = ({ playlist, videoId }) => {
@@ -13,7 +12,7 @@ const VideoPlayer = ({ playlist, videoId }) => {
   });
 
   return (
-    <Container sx={{ my: 16 }}>
+    <Container>
       {videoDetails && <ReactYTPlayer vDetails={videoDetails} />}
     </Container>
   );

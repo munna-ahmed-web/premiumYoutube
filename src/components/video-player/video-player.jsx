@@ -16,7 +16,7 @@ const ReactYTPlayer = ({ vDetails }) => {
 
   return (
     <div>
-      <p>{title}</p>
+      <h4>{title}</h4>
       <YouTube videoId={videoId} opts={opts} />
     </div>
   );

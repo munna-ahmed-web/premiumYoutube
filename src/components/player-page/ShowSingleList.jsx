@@ -8,11 +8,11 @@ import Button from "@mui/material/Button";
    } = videoInfo;
 
    return (
-     <div>
-       <List>
-         <ListItem> <Button variant="outlined" onClick={()=>getVideoId(videoId)} sx={{color:'black'}}  >{title}</Button> </ListItem>
-       </List>
-     </div>
+     <>
+       <>
+         <ListItem> <Button variant="outlined" onClick={()=>getVideoId(videoId)} sx={{color:'black', padding:'3px'}}  >{title}</Button> </ListItem>
+       </>
+     </>
    );
  };
  

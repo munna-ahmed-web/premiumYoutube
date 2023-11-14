@@ -1,13 +1,9 @@
-
-import PlayListCardItem  from "../playlist-card-item";
-import {useStoreState} from 'easy-peasy'
+import PlayListCardItem from "../playlist-card-item";
+import { useStoreState } from "easy-peasy";
 import RecentsPlaylist from "../recents";
 import FavoriteItems from "../favorite";
 import { useState } from "react";
 import Pagination from "../pagination/Pagination";
-
-
-
 
 const HomePage = () => {
   const [currentPage, setcurrentPage] = useState(1);
@@ -34,12 +30,13 @@ const HomePage = () => {
 
   const lastIndex = currentPage * postPerPage;
   const firstIndex = lastIndex - postPerPage;
-  const playListArray = totalPlayLists.slice(firstIndex, lastIndex)
+  const playListArray = totalPlayLists.slice(firstIndex, lastIndex);
   return (
     <div className="container">
       <div className="container1">
         <h2 className="mainPlTitle">PlayLists</h2>
-        {playListArray.length>0 ? (<div className="cardContainer">
+        {playListArray.length > 0 ? (
+          <div className="cardContainer">
             <>
               {playListArray.map((item) => {
                 return (
@@ -53,8 +50,11 @@ const HomePage = () => {
                 );
               })}
             </>
-        </div>): <p>Play list not available. Click above to add playlist.</p> }
-        
+          </div>
+        ) : (
+          <p>Play list not available. Click above to add playlist.</p>
+        )}
+
         <Pagination
           postPerPage={postPerPage}
           totalPost={totalPlayLists.length}
@@ -69,10 +69,4 @@ const HomePage = () => {
   );
 };
 
-
 export default HomePage;
-
-
-
-
-

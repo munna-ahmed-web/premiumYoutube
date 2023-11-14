@@ -19,10 +19,10 @@ const PlaylistForm = ({open, handleClose}) => {
       if(!state){
         alert('Invalid State')
       }else{
-        const firstTwo = state.slice(0, 2);
-        if (firstTwo == "PL"){
+        const firstTwoLetter = state.slice(0, 2);
+        if (firstTwoLetter == "PL") {
           getPlayList(state);
-        }else{
+        } else {
           getPlayList(extractPlaylistId(state));
         } 
         setState('')
@@ -39,7 +39,7 @@ const PlaylistForm = ({open, handleClose}) => {
       <DialogContent>
         <DialogContentText>
           To add a new playlist please insert the playlist id or link. Pleae
-          make sure the link is correct. Otherwise you won't able to fetch the
+          make sure the link is correct. Otherwise you will not be able to fetch the
           playlist information.
         </DialogContentText>
         <TextField

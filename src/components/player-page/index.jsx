@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+
 import { useStoreState, useStoreActions } from "easy-peasy";
 import { useParams } from 'react-router-dom'
 import ShowVideoList from "./ShowVideoList";
@@ -21,24 +21,24 @@ const PlayerPage = () => {
  
 
   return (
-    <Container maxWidth="lg">
-      <Grid container>
-        <Grid item md={8}>
+    <>
+      <div className="mainPlayerContainer">
+        <div className="player" >
           {selectedPlaylist && (
             <VideoPlayer playlist={selectedPlaylist} videoId={videoId} />
           )}
-        </Grid>
+        </div>
 
-        <Grid item md={4} sx={{ my: 16 }} >
+        <div className="playlistItem" >
           {selectedPlaylist && (
             <ShowVideoList
               singlePlaylist={selectedPlaylist}
               getVideoId={getId}
             />
           )}
-        </Grid>
-      </Grid>
-    </Container>
+        </div>
+      </div>
+    </>
   );
 };
 
